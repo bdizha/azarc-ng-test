@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+.nav-user-profile {
+  height: 30px;
+  width: 30px;
+}
+
+legend {
+  background-color: white;
+  border: 1px solid rgb(218, 220, 224);
+  border-radius: 8px;
+  display: block;
+  padding: 15px;
+}
+
+label {
+  display: block;
+}
+
+.navbar-brand.logo {
+  background-image: url(/assets/logo.png);
+  height: 31px;
+  width: 98px;
+}

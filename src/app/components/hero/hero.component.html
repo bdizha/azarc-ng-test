@@ -1,0 +1,29 @@
+<h3 class="mb-3 mt-3">Search employees</h3>
+<div class="search-hero">
+  <input class="form-control mb-3 mt-3"
+         type="text"
+         name="search"
+         (keydown)="search($event)"
+         [(ngModel)]="searchText"
+         autocomplete="off"
+         placeholder="Start searching for staff name, office, role or country">
+</div>
+<table class="table table-bordered table-condensed table-striped table-hover">
+  <thead>
+    <tr>
+      <th>username</th>
+      <th>email</th>
+      <th>office</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let staff of employees!">
+    <td>{{staff.name}}</td>
+    <td>{{staff.email}}</td>
+    <td>{{staff.officeId}}</td>
+    <td>
+      <a routerLink="/staff/{{ staff.id }}">View</a>
+    </td>
+  </tr>
+  </tbody>
+</table>

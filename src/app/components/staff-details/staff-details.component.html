@@ -1,0 +1,60 @@
+<div class="container mt-5" *ngIf="staff | async as staff">
+  <div class="row align-items-center staff-header mb-5 text-center text-md-left">
+    <div class="col-md-2">
+      <img
+        [src]="staff.picture"
+        class="rounded-circle img-fluid staff-picture mb-3 mb-md-0"
+      />
+    </div>
+    <div class="col-md">
+      <div class="row">
+        <div class="col-sm-12">
+          <h4>{{ staff.name }}</h4>
+        </div>
+        <div class="col-sm-12">
+          <p>{{ staff.jobTitle }}</p>
+        </div>
+        <div class="col-sm-12">
+          <p>{{ staff.office.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <legend id="personal-details" class="col-form-label">
+        <label for="residential-address">Employee details</label>
+        <div class="row">
+          <div class="col-sm-2">Email</div>
+          <div id="email" class="col-sm-10">
+            {{ staff.email }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2">Phone</div>
+          <div id="phone" class="col-sm-10">
+            {{ staff.phone }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2">Gender</div>
+          <div id="role" class="col-sm-10">
+            {{ staff.gender }}
+          </div>
+        </div>
+      </legend>
+    </div>
+    <div class="col-sm-6">
+      <legend id="residential-address" class="col-form-label">
+        <label for="residential-address">Residential address</label>
+        <div class="row">
+          <div class="col-sm-10">
+            {{ staff.building }}, {{ staff.streetAddress }}, {{ staff.city }} <br>
+            {{ staff.postcode }} <br>
+            {{ staff.country }}
+          </div>
+        </div>
+      </legend>
+    </div>
+  </div>
+</div>
